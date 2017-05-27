@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQT-TV-9fQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SS-kn-Efl">
+                                <rect key="frame" x="298" y="36" width="45" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.46103551622372707" blue="0.56466434699522527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-cb-kmY">
+                                <rect key="frame" x="137" y="551" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.45412905843242191" blue="0.55698701495033121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CgY-0K-YQE"/>
+                                    <constraint firstAttribute="width" constant="100" id="pRr-q8-ClR"/>
+                                </constraints>
+                                <state key="normal" title="Take Pic"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9SS-kn-Efl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="18i-HM-VqK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wA4-cb-kmY" secondAttribute="bottom" constant="16" id="8IW-LB-xqt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9SS-kn-Efl" secondAttribute="trailing" constant="16" id="Az9-ap-YUa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pQT-TV-9fQ" secondAttribute="bottom" id="Mpe-cc-kSc"/>
+                            <constraint firstItem="pQT-TV-9fQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PLh-ax-R8W"/>
+                            <constraint firstAttribute="trailing" secondItem="pQT-TV-9fQ" secondAttribute="trailing" id="VMs-gr-fUi"/>
+                            <constraint firstItem="pQT-TV-9fQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="k1Y-Hi-iUP"/>
+                            <constraint firstItem="wA4-cb-kmY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wwB-uN-mrL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iaw-L1-oes">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="7wg-FF-oS2"/>
