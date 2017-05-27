@@ -11,11 +11,14 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    
+    
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCapturePhotoOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
     
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var button: UIButton!
 
     override func viewWillAppear(_ animated: Bool) {
         
@@ -40,7 +43,12 @@ class ViewController: UIViewController {
                             previewLayer.connection.videoOrientation = .portrait
                             
                             cameraView.layer.addSublayer(previewLayer)
-                            cameraView.addSubview(<#T##view: UIView##UIView#>)
+                            cameraView.addSubview(button)
+                            
+                            previewLayer.position = CGPoint(x: self.cameraView.frame.width / 2, y:  self.cameraView.frame.height / 2)
+                            
+                            previewLayer.bounds = cameraView.frame
+                            captureSession.startRunning()
                         }
                     }
                     
