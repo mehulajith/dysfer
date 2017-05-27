@@ -23,6 +23,34 @@ class ViewController: UIViewController {
         
         for device in (deviceSession?.devices)! {
         
+            if device.position == AVCaptureDevicePosition.front {
+                
+                do {
+                    
+                    let input = try AVCaptureDeviceInput(device: device)
+                    
+                    if captureSession.canAddInput(input){
+                        captureSession.addInput(input)
+                        
+                        if captureSession.canAddOutput(sessionOutput) {
+                            captureSession.addOutput(sessionOutput)
+                            
+                            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+                            previewLayer.connection.videoOrientation = .portrait
+                            
+                            cameraView.layer.addSublayer(previewLayer)
+                            cameraView.addSubview(<#T##view: UIView##UIView#>)
+                        }
+                    }
+                    
+                } catch let avError {
+                    
+                    print(avError)
+                    
+                }
+                
+            }
             
             
         }
