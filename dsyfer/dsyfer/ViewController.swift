@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         for device in (deviceSession?.devices)! {
         
-            if device.position == AVCaptureDevicePosition.front {
+            if device.position == AVCaptureDevicePosition.back {
                 
                 do {
                     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                             cameraView.layer.addSublayer(previewLayer)
                             cameraView.addSubview(button)
                             
-                            previewLayer.position = CGPoint(x: self.cameraView.frame.width / 2, y:  self.cameraView.frame.height / 2)
+                            previewLayer.position = CGPoint(x: self.cameraView.frame.width, y:  self.cameraView.frame.height)
                             
                             previewLayer.bounds = cameraView.frame
                             captureSession.startRunning()
