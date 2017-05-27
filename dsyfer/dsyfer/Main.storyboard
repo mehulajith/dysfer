@@ -24,14 +24,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQT-TV-9fQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-cb-kmY">
-                                        <rect key="frame" x="137" y="536" width="100" height="100"/>
-                                        <color key="backgroundColor" red="1" green="0.45412905843242191" blue="0.55698701495033121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-cb-kmY">
+                                        <rect key="frame" x="137" y="537" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="1RG-DZ-I2z"/>
                                             <constraint firstAttribute="width" constant="100" id="DTC-oT-6zE"/>
                                         </constraints>
-                                        <state key="normal" title="Take Pic"/>
+                                        <state key="normal" title="Take Pic" image="cameraButton"/>
                                         <connections>
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NO3-li-Nem"/>
                                         </connections>
@@ -72,4 +71,7 @@
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cameraButton" width="100" height="100"/>
+    </resources>
 </document>
