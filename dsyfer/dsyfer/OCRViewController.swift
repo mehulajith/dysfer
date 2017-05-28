@@ -174,6 +174,8 @@ class OCRViewController: UIViewController {
         let utterance = AVSpeechUtterance(string: aud!)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
+        utterance.rate = 0.5
+        
         let synth = AVSpeechSynthesizer()
         synth.speak(utterance)
         
