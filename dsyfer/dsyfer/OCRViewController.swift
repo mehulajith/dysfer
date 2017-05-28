@@ -166,7 +166,6 @@ class OCRViewController: UIViewController {
         }
         
         textView.text = detectedText
-        
     }
     
     @IBAction func simplifyText(_ sender: UIButton) {       // Dsyfer!
