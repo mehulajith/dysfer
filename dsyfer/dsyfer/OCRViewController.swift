@@ -12,7 +12,6 @@ import Alamofire
 
 class OCRViewController: UIViewController {
     
-    
     var image = UIImage()
     var photo: UIImage!
     
@@ -22,11 +21,11 @@ class OCRViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let imageData = UserDefaults.standard.object(forKey: "imageData")
-        
-        let yourImage = UIImage(data:imageData as! Data)
-        
-        let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
+//        let imageData = UserDefaults.standard.object(forKey: "imageData")
+//        
+//        let yourImage = UIImage(data:imageData as! Data)
+//        
+//        let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
         
     }
 
@@ -37,17 +36,24 @@ class OCRViewController: UIViewController {
         
     }
     
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
     func  detectText () {
         
-        let imageData = UserDefaults.standard.object(forKey: "imageData")
-//
-        let yourImage = UIImage(data:imageData as! Data)
+//        let imageData = UserDefaults.standard.object(forKey: "imageData")
+        
+        
+//        let yourImage = UIImage(named: "imagetest")
 
 //        let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
         
 //        let image  = img
         
-        let imagedata = UIImagePNGRepresentation(yourImage!)
+        let imagedata = UIImageJPEGRepresentation(image, 0.8)
         
         let  base64image = imagedata!.base64EncodedString(options: .endLineWithCarriageReturn)
         

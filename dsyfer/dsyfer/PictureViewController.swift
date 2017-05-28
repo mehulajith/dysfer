@@ -5,13 +5,14 @@
 //  Created by Mehul Ajith on 5/27/17.
 //  Copyright © 2017 Mehul Ajith. All rights reserved.
 //
-
 import UIKit
 
-class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigatiovarntrollerDelegate {
-
+class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
     @IBOutlet weak var myImageView: UIImageView!
     let picker = UIImagePickerController()
+    
+    var photo = UIImage()
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -20,7 +21,6 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self // delegate added
-
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +37,7 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
             self.present(imagePickerController, animated: true, completion: nil)
         }))
         
-        alert.addAction(UIAlertAction(title: "Photo Libarary", style: .default, handler: { (action:UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
             let imagePickerController = UIImagePickerController()
             imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerController, animated: true, completion: nil)
@@ -45,16 +45,17 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
         self.present(alert, animated: true, completion: nil)
-
+        
         
     }
-
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
+        self.photo = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             myImageView.image = image
@@ -74,7 +75,7 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let secondVC: OCRViewController = segue.destination as! OCRViewController
         
-        secondVC.image = myImageView.image!
+        secondVC.image = self.photo
     }
     
     
