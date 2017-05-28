@@ -12,6 +12,8 @@
 		2A311ED01ED9FF7B00E2B1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A311ECF1ED9FF7B00E2B1A3 /* Assets.xcassets */; };
 		2A311ED31ED9FF7B00E2B1A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A311ED11ED9FF7B00E2B1A3 /* LaunchScreen.storyboard */; };
 		2A311EDB1EDA06B000E2B1A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A311EDA1EDA06B000E2B1A3 /* Main.storyboard */; };
+		2AE1F6DB1EDA378600AE9387 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1F6DA1EDA378600AE9387 /* PictureViewController.swift */; };
+		2AE1F6DD1EDA40BF00AE9387 /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1F6DC1EDA40BF00AE9387 /* OCRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2A311ED21ED9FF7B00E2B1A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A311ED41ED9FF7B00E2B1A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A311EDA1EDA06B000E2B1A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2AE1F6DA1EDA378600AE9387 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		2AE1F6DC1EDA40BF00AE9387 /* OCRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				2A311EC81ED9FF7B00E2B1A3 /* AppDelegate.swift */,
 				2A311ECA1ED9FF7B00E2B1A3 /* ViewController.swift */,
+				2AE1F6DA1EDA378600AE9387 /* PictureViewController.swift */,
+				2AE1F6DC1EDA40BF00AE9387 /* OCRViewController.swift */,
 				2A311EDA1EDA06B000E2B1A3 /* Main.storyboard */,
 				2A311ECF1ED9FF7B00E2B1A3 /* Assets.xcassets */,
 				2A311ED11ED9FF7B00E2B1A3 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A311ECB1ED9FF7B00E2B1A3 /* ViewController.swift in Sources */,
+				2AE1F6DD1EDA40BF00AE9387 /* OCRViewController.swift in Sources */,
+				2AE1F6DB1EDA378600AE9387 /* PictureViewController.swift in Sources */,
 				2A311EC91ED9FF7B00E2B1A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
