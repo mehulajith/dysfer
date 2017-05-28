@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import AVFoundation
 
 class OCRViewController: UIViewController {
     
@@ -168,9 +169,14 @@ class OCRViewController: UIViewController {
         
     }
     
-    @IBAction func simplifyText(_ sender: UIButton) {       
+    @IBAction func simplifyText(_ sender: UIButton) {       // Dsyfer!
         
+        let aud = textView.text
+        let utterance = AVSpeechUtterance(string: aud!)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
+        let synth = AVSpeechSynthesizer()
+        synth.speak(utterance)
         
     }
     
