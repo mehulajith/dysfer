@@ -7,7 +7,11 @@
 //
 import UIKit
 
+
+
 class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    @IBOutlet weak var done: UIButton!
     
     @IBOutlet weak var myImageView: UIImageView!
     let picker = UIImagePickerController()
@@ -22,6 +26,11 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
         super.viewDidLoad()
         picker.delegate = self // delegate added
         // Do any additional setup after loading the view.
+        
+        done.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+        done.layer.cornerRadius = 0.5 * done.bounds.size.width
+        done.clipsToBounds = true
+        
     }
     
     

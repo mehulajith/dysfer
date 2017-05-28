@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var addNew: UIButton!
+    
 
     override func viewWillAppear(_ animated: Bool) {
         
@@ -17,7 +20,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.]
+        
+        addNew.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+        addNew.layer.cornerRadius = 0.5 * addNew.bounds.size.width
+        addNew.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +35,9 @@ class ViewController: UIViewController {
     @IBAction func takePhoto(_ sender: UIButton) {
         
     }
+    
+    
+    
 
 }
 
