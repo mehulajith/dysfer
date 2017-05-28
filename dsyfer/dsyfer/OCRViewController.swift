@@ -7,14 +7,17 @@
 //
 
 import UIKit
-import TesseractOCR
+import SwiftyJSON
+import Alamofire
 
-class OCRViewController: UIViewController, G8TesseractDelegate {
+class OCRViewController: UIViewController {
     
     
     let image = UIImage()
     
     @IBOutlet weak var textView: UITextView!
+    var googleApiKey = "AIzaSyC0gA9lgcdKGKa95nSuOIzxgVn1aqpB4vg"
+    
     override func viewDidAppear(_ animated: Bool) {
         
         let imageData = UserDefaults.standard.object(forKey: "imageData")
@@ -35,20 +38,6 @@ class OCRViewController: UIViewController, G8TesseractDelegate {
         let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
 
         
-       if let tesseract = G8Tesseract(language: "eng") {
-            
-            tesseract.delegate = self
-            tesseract.image = img.g8_blackAndWhite()
-            tesseract.recognize()
-            
-            textView.text = tesseract.recognizedText
-            
-        }
-        
-    }
-    
-    func progressImageRecognition(for tesseract: G8Tesseract!) {
-        print("Recogniton Progress \(tesseract.progress) %")
     }
 
     override func didReceiveMemoryWarning() {

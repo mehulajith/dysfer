@@ -11,6 +11,7 @@ import UIKit
 class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var myImageView: UIImageView!
+    let picker = UIImagePickerController()
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -18,7 +19,8 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        picker.delegate = self // delegate added
+
         // Do any additional setup after loading the view.
     }
     
@@ -52,15 +54,20 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        myImageView.image = image
         
-        let imageData = UIImagePNGRepresentation(image)
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            myImageView.image = image
+            
+            let imageData = UIImagePNGRepresentation(image)
+            
+            UserDefaults.standard.set(imageData, forKey: "imageData")
+            
+            picker.dismiss(animated: true, completion: nil)
+        } else{
+            print("Something went wrong")
+        }
         
-        UserDefaults.standard.set(imageData, forKey: "imageData")
-        
-        picker.dismiss(animated: true, completion: nil)
         
     }
     

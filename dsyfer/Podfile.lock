@@ -1,12 +1,31 @@
 PODS:
-  - TesseractOCRiOS (4.0.0)
+  - Alamofire (4.4.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - TesseractOCRiOS (= 4.0.0)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
+  - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: master
+    :git: https://github.com/Alamofire/Alamofire.git
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: c8700ac7ea6b7efa7200e2920bf528e88b4dbee6
+    :git: https://github.com/Alamofire/Alamofire.git
+  SwiftyJSON:
+    :commit: de5dc3b1b421805769590d331178551bbb0e5733
+    :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+  Alamofire: 4c2bf7fa03c4a626163606de0a417568c270575e
+  SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
 
-PODFILE CHECKSUM: 7449e07cb1e41940e2d55d89b26d5f9c8750fc56
+PODFILE CHECKSUM: 9ae533e0e6845b5e4b56974ec22da1a6fc37e340
 
 COCOAPODS: 1.1.1
