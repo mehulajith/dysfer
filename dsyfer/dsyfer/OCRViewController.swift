@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import TessereactOCR
 
 class OCRViewController: UIViewController {
     
+    
     let image = UIImage()
     
+    @IBOutlet weak var textView: UITextView!
     override func viewDidAppear(_ animated: Bool) {
         
         let imageData = UserDefaults.standard.object(forKey: "imageData")
