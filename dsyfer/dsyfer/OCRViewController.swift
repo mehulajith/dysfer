@@ -166,6 +166,13 @@ class OCRViewController: UIViewController {
         }
         
         textView.text = detectedText
+        
+        var myString = textView.text
+        let myStringWithoutLastWord = myString?.components(separatedBy: " ").dropLast().joined(separator: " ")
+        
+        textView.text = myStringWithoutLastWord
+        
+
     }
     
     @IBAction func simplifyText(_ sender: UIButton) {       // Dsyfer!
@@ -174,7 +181,7 @@ class OCRViewController: UIViewController {
         let utterance = AVSpeechUtterance(string: aud!)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
-        utterance.rate = 0.5
+        utterance.rate = 0.35
         
         let synth = AVSpeechSynthesizer()
         synth.speak(utterance)
