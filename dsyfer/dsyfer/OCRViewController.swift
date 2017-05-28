@@ -10,7 +10,6 @@ import UIKit
 
 class OCRViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
     let image = UIImage()
     
     override func viewDidAppear(_ animated: Bool) {
