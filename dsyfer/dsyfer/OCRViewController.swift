@@ -20,7 +20,6 @@ class OCRViewController: UIViewController {
         
         let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
         
-        imageView.image = img
     }
 
     override func viewDidLoad() {
