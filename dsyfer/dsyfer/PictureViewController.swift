@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UINavigatiovarntrollerDelegate {
 
     @IBOutlet weak var myImageView: UIImageView!
     let picker = UIImagePickerController()
@@ -70,6 +70,13 @@ class PictureViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondVC: OCRViewController = segue.destination as! OCRViewController
+        
+        secondVC.image = myImageView.image!
+    }
+    
     
     /*
     // MARK: - Navigation

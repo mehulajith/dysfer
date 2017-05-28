@@ -13,10 +13,11 @@ import Alamofire
 class OCRViewController: UIViewController {
     
     
-    let image = UIImage()
+    var image = UIImage()
     var photo: UIImage!
     
     @IBOutlet weak var textView: UITextView!
+    
     var googleApiKey = "AIzaSyC0gA9lgcdKGKa95nSuOIzxgVn1aqpB4vg"
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,7 +34,6 @@ class OCRViewController: UIViewController {
         super.viewDidLoad()
         
         detectText()
-
         
     }
     
