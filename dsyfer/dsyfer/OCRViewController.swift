@@ -15,6 +15,7 @@ class OCRViewController: UIViewController {
     var image = UIImage()
     var photo: UIImage!
     
+    @IBOutlet weak var titleBar: UITextField!
     @IBOutlet weak var textView: UITextView!
     
     var googleApiKey = "AIzaSyC0gA9lgcdKGKa95nSuOIzxgVn1aqpB4vg"
@@ -166,5 +167,12 @@ class OCRViewController: UIViewController {
         textView.text = detectedText
         
     }
+    
+    @IBAction func simplifyText(_ sender: UIButton) {
+        
+        
+        
+    }
+    
     
 }

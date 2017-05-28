@@ -151,22 +151,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="analyzing ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbP-u0-QBN">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="64" width="343" height="495"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzA-vd-MRC">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.99887639284133911" green="0.14073550701141357" blue="0.21165919303894043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WAe-IU-mbg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Dsyfer!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="simplifyText:" destination="2Lu-ff-vrY" eventType="touchUpInside" id="SMM-7Y-crw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JUQ-TM-OU9">
+                                <rect key="frame" x="16" y="87" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WNB-4P-RPH"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Di1-GJ-aEh" firstAttribute="top" secondItem="fbP-u0-QBN" secondAttribute="bottom" constant="20" id="bl9-34-W7s"/>
+                            <constraint firstAttribute="trailing" secondItem="mzA-vd-MRC" secondAttribute="trailing" id="6lR-5f-A0o"/>
+                            <constraint firstItem="Di1-GJ-aEh" firstAttribute="top" secondItem="mzA-vd-MRC" secondAttribute="bottom" id="7sQ-kg-NHU"/>
+                            <constraint firstItem="JUQ-TM-OU9" firstAttribute="leading" secondItem="SmA-F4-oJi" secondAttribute="leadingMargin" id="Kt8-pa-KPp"/>
+                            <constraint firstItem="mzA-vd-MRC" firstAttribute="top" secondItem="fbP-u0-QBN" secondAttribute="bottom" constant="8" id="Q7G-yq-NEx"/>
+                            <constraint firstItem="JUQ-TM-OU9" firstAttribute="trailing" secondItem="SmA-F4-oJi" secondAttribute="trailingMargin" id="cof-Mh-cIX"/>
+                            <constraint firstItem="mzA-vd-MRC" firstAttribute="leading" secondItem="SmA-F4-oJi" secondAttribute="leading" id="fRS-ba-QID"/>
                             <constraint firstItem="fbP-u0-QBN" firstAttribute="leading" secondItem="SmA-F4-oJi" secondAttribute="leadingMargin" id="jHf-or-OG8"/>
                             <constraint firstItem="fbP-u0-QBN" firstAttribute="trailing" secondItem="SmA-F4-oJi" secondAttribute="trailingMargin" id="jf0-Jw-bxv"/>
-                            <constraint firstItem="fbP-u0-QBN" firstAttribute="top" secondItem="SmA-F4-oJi" secondAttribute="topMargin" constant="20" id="yDV-SR-c5g"/>
+                            <constraint firstItem="fbP-u0-QBN" firstAttribute="top" secondItem="hLi-yn-V3X" secondAttribute="bottom" id="qMN-pS-R6f"/>
+                            <constraint firstItem="JUQ-TM-OU9" firstAttribute="top" secondItem="hLi-yn-V3X" secondAttribute="bottom" constant="23" id="xMT-gp-F4k"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textView" destination="fbP-u0-QBN" id="2Q6-o7-iGD"/>
+                        <outlet property="titleBar" destination="JUQ-TM-OU9" id="QlL-9S-Qvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW3-eO-t7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
