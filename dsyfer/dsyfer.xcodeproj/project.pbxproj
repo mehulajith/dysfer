@@ -14,13 +14,12 @@
 		2A311EDB1EDA06B000E2B1A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A311EDA1EDA06B000E2B1A3 /* Main.storyboard */; };
 		2AE1F6DB1EDA378600AE9387 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1F6DA1EDA378600AE9387 /* PictureViewController.swift */; };
 		2AE1F6DD1EDA40BF00AE9387 /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1F6DC1EDA40BF00AE9387 /* OCRViewController.swift */; };
-		9E807D7C29833AFC5F717354 /* Pods_dsyfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1463BBD6FCDBC82847E807D3 /* Pods_dsyfer.framework */; };
+		900AD7E9087FFCF70B36E314 /* Pods_dsyfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E001B4B179574737B7DB2444 /* Pods_dsyfer.framework */; };
 		FADF7D9A1EDA6851006F93A1 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = FADF7D991EDA6851006F93A1 /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D86BF2C8B6B64BAD6D7CB97 /* Pods-dsyfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsyfer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer.debug.xcconfig"; sourceTree = "<group>"; };
-		1463BBD6FCDBC82847E807D3 /* Pods_dsyfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsyfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22445E863E6AC28058120AFC /* Pods-dsyfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsyfer.release.xcconfig"; path = "Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer.release.xcconfig"; sourceTree = "<group>"; };
 		2A311EC51ED9FF7A00E2B1A3 /* dsyfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dsyfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A311EC81ED9FF7B00E2B1A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A311ECA1ED9FF7B00E2B1A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +29,8 @@
 		2A311EDA1EDA06B000E2B1A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2AE1F6DA1EDA378600AE9387 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		2AE1F6DC1EDA40BF00AE9387 /* OCRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
-		6486DB723FFB51CE99A6AEE5 /* Pods-dsyfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsyfer.release.xcconfig"; path = "Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer.release.xcconfig"; sourceTree = "<group>"; };
+		BC32FE92B8A576A6524D5649 /* Pods-dsyfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsyfer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer.debug.xcconfig"; sourceTree = "<group>"; };
+		E001B4B179574737B7DB2444 /* Pods_dsyfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsyfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADF7D991EDA6851006F93A1 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E807D7C29833AFC5F717354 /* Pods_dsyfer.framework in Frameworks */,
+				900AD7E9087FFCF70B36E314 /* Pods_dsyfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +51,8 @@
 			children = (
 				2A311EC71ED9FF7A00E2B1A3 /* dsyfer */,
 				2A311EC61ED9FF7A00E2B1A3 /* Products */,
-				BDC5C5812E11DF4FDC9DA715 /* Pods */,
-				33AF54DA4E3AB3FD5A8CA1D7 /* Frameworks */,
+				432A954B0075B0BBCEFFF589 /* Pods */,
+				E866573E8F309D5D19DBB4DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,21 +80,21 @@
 			path = dsyfer;
 			sourceTree = "<group>";
 		};
-		33AF54DA4E3AB3FD5A8CA1D7 /* Frameworks */ = {
+		432A954B0075B0BBCEFFF589 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1463BBD6FCDBC82847E807D3 /* Pods_dsyfer.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BDC5C5812E11DF4FDC9DA715 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0D86BF2C8B6B64BAD6D7CB97 /* Pods-dsyfer.debug.xcconfig */,
-				6486DB723FFB51CE99A6AEE5 /* Pods-dsyfer.release.xcconfig */,
+				BC32FE92B8A576A6524D5649 /* Pods-dsyfer.debug.xcconfig */,
+				22445E863E6AC28058120AFC /* Pods-dsyfer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E866573E8F309D5D19DBB4DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E001B4B179574737B7DB2444 /* Pods_dsyfer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,12 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A311ED71ED9FF7B00E2B1A3 /* Build configuration list for PBXNativeTarget "dsyfer" */;
 			buildPhases = (
-				9F4577744C529A808441B948 /* [CP] Check Pods Manifest.lock */,
+				EF7FD2C090988C28B2DB6BD9 /* [CP] Check Pods Manifest.lock */,
 				2A311EC11ED9FF7A00E2B1A3 /* Sources */,
 				2A311EC21ED9FF7A00E2B1A3 /* Frameworks */,
 				2A311EC31ED9FF7A00E2B1A3 /* Resources */,
-				F3812C658FDA99ACA36FD4BB /* [CP] Embed Pods Frameworks */,
-				F21A10BE85B578CD081B3DDB /* [CP] Copy Pods Resources */,
+				94B1DCDD421DA184ADFEE8A2 /* [CP] Embed Pods Frameworks */,
+				5E4B1B4A80F580DE6F2587BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,22 +170,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9F4577744C529A808441B948 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F21A10BE85B578CD081B3DDB /* [CP] Copy Pods Resources */ = {
+		5E4B1B4A80F580DE6F2587BF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,7 +185,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3812C658FDA99ACA36FD4BB /* [CP] Embed Pods Frameworks */ = {
+		94B1DCDD421DA184ADFEE8A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,6 +198,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dsyfer/Pods-dsyfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7FD2C090988C28B2DB6BD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -340,7 +340,7 @@
 		};
 		2A311ED81ED9FF7B00E2B1A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D86BF2C8B6B64BAD6D7CB97 /* Pods-dsyfer.debug.xcconfig */;
+			baseConfigurationReference = BC32FE92B8A576A6524D5649 /* Pods-dsyfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FTX86VU7B2;
@@ -356,7 +356,7 @@
 		};
 		2A311ED91ED9FF7B00E2B1A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6486DB723FFB51CE99A6AEE5 /* Pods-dsyfer.release.xcconfig */;
+			baseConfigurationReference = 22445E863E6AC28058120AFC /* Pods-dsyfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FTX86VU7B2;
