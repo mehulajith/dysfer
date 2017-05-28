@@ -9,7 +9,7 @@
 import UIKit
 import TesseractOCR
 
-class OCRViewController: UIViewController {
+class OCRViewController: UIViewController, G8TesseractDelegate {
     
     
     let image = UIImage()
@@ -27,8 +27,28 @@ class OCRViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let imageData = UserDefaults.standard.object(forKey: "imageData")
+        
+        let yourImage = UIImage(data:imageData as! Data)
+        
+        let img = UIImage(cgImage: (yourImage?.cgImage!)!, scale: CGFloat(1.0), orientation: .right)
 
-        // Do any additional setup after loading the view.
+        
+       if let tesseract = G8Tesseract(language: "eng") {
+            
+            tesseract.delegate = self
+            tesseract.image = img.g8_blackAndWhite()
+            tesseract.recognize()
+            
+            textView.text = tesseract.recognizedText
+            
+        }
+        
+    }
+    
+    func progressImageRecognition(for tesseract: G8Tesseract!) {
+        print("Recogniton Progress \(tesseract.progress) %")
     }
 
     override func didReceiveMemoryWarning() {
