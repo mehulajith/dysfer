@@ -88,6 +88,7 @@ class OCRViewController: UIViewController {
             print("--Data--: ",response.data)
             print("--Result--: ",response.result)
             
+<<<<<<< Updated upstream
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
             }
@@ -137,6 +138,10 @@ class OCRViewController: UIViewController {
                 } else {
                     print("Unknown error: \(response.result.error)")
                 }
+=======
+            textView.text = tesseract.recognizedText
+        
+>>>>>>> Stashed changes
         }
     }
     
