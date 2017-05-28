@@ -168,7 +168,7 @@ class OCRViewController: UIViewController {
         
     }
     
-    @IBAction func simplifyText(_ sender: UIButton) {
+    @IBAction func simplifyText(_ sender: UIButton) {       
         
         
         
