@@ -11,3 +11,6 @@ An iOS application to help people with difficulty reading using Machine Learning
 
 Dsyfer (pronounced like decipher), can take a picture of any physical text and convert it into a very accurate voiceover of the text. This app has the ability to overcome different variables such as glare or reflections and still maintain 95% accuracy with sheer speed through machine learning. 
 
+## The Hack
+
+This app won the Grand Prize Award at ChicagoHacks 2017.
